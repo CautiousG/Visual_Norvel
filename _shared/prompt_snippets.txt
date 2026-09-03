@@ -1,0 +1,37 @@
+========================================================
+提示词片段库  —— 按需拼接，跨作品通用
+========================================================
+
+【通用负面词】
+extra fingers, deformed hands, malformed limbs, blurry face,
+distorted weapon, oversaturated, plastic texture, text, watermark, logo,
+（古装再加）japanese, kimono, samurai, chinese opera makeup, neon, modern buildings
+
+【景别】
+extreme close-up 大特写 / close-up 特写 / medium shot 中景 /
+full shot 全景 / wide shot 远景 / extreme wide (bird's eye) 大远景俯拍
+
+【运镜】
+static locked 固定 / slow push-in 缓推 / slow pull-back 缓拉 /
+slow pan 横摇 / tilt up over empty sky 上摇过空镜 / handheld subtle 轻微手持
+
+【天气/光线】（优先用，出武侠味且掩盖瑕疵）
+light rain 小雨 / heavy rain 暴雨 / falling snow 落雪 / drifting mist 薄雾 /
+strong wind lifting robes 风掀衣袍 / moonlit night 月夜 / backlit lamplight 逆光烛火
+
+【打斗：以静写动 三段式】（AI 拍不了连续武打，用这个）
+① 起势：握柄的手 / 眼神 / 衣角扬起 / 落叶悬停　—— 环境音收窄只剩心跳
+② 爆发：一道刀光剪影 或 白闪一帧　—— 静音 0.3s → 铮！金属交击 3 声
+③ 结果：刀尖血珠 / 对手缓缓倾倒 / 断裂兵器落地　—— 旁白一句盖住
+
+【难点替代拍法】
+轻功腾跃 → 衣袍下垂+落叶上扬+镜头上摇过空镜（人不入画）
+大军/聚义 → 剪影、逆光、极远俯拍，只拍旗帜与火把
+朝堂群臣 → 背影+朝服局部、地砖倒影、殿柱前景遮挡
+负伤流血 → 血渗过衣料/血滴落地/血溅纸卷（避开伤口）
+长段对白 → 背身、侧脸、手部、听者反应（规避口型不同步）
+
+【结构与节奏】
+开场0~8s 强画面+定调旁白（不交代背景） / 铺垫8~40s 最少信息 /
+主体40s~ 处境与抉择 / 峰值倒数30s / 收尾最后10s 空镜+留白（不要 CTA）
+单镜 3~5s（比短视频略长）；5 分钟 ≈ 70~90 镜 ≈ 旁白 1200~1500 字

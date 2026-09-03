@@ -1,0 +1,32 @@
+# ───────── 版权：原著全文一律不上传（目录级排除，内含 md 也被挡）─────────
+**/01_source_and_script/source/
+*.epub
+_tmp_epub/
+
+# ───────── 反排除：全局 ~/.gitignore_global 忽略了这些扩展名，本仓要 ─────────
+!*.md
+!*.html
+!*.txt
+!*.py
+# 注：因 source/ 是目录级排除，其内 md/epub/txt 不会被上面的 ! 重新包含
+
+# ───────── 个人成片与大体量生产素材（PERSONAL_ONLY，不入库）─────────
+**/04_generated/
+**/05_audio/
+**/06_edit/
+**/07_final/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.prproj
+*.drp
+
+# ───────── 临时 / 系统 ─────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+.netlify/
+__pycache__/
+*.pyc

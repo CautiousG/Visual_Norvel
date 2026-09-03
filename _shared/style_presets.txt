@@ -1,0 +1,56 @@
+========================================================
+风格模板库  —— 拼在每个镜头提示词最前面，全片统一
+每个镜头完整提示词 = 风格模板 + 角色固定提示词 + 本镜头内容(景别/动作/光线/天气)
+========================================================
+
+⚠️ 先定两件事，且中途不改：
+1) 风格路线二选一（见下 A / B），不要把两路的词混堆，否则 AI 两头都做不像。
+2) 画幅写进每条提示词并全片统一。沉缓电影气质建议 16:9 或 2.39:1 横幅；
+   仅当主要用手机竖屏看才用 9:16。换画幅 = 所有构图重来。
+
+
+--------------------------------------------------------
+A · 写实电影感（默认）—— 保留摄影词，水墨只作调色倾向
+--------------------------------------------------------
+cinematic wuxia film, Ming dynasty China, photorealistic live-action look,
+ink-wash-INSPIRED color grading (a photographic frame graded toward ink-wash,
+NOT a flat 2D ink painting),
+muted palette of slate grey / ink black / faded indigo, with restrained
+warm amber accents only from lamplight,
+volumetric mist, atmospheric haze, deep shadows,
+35mm anamorphic lens, shallow depth of field, subtle film grain,
+natural motion, slow deliberate camera
+[画幅：cinematic 16:9 / 2.39:1]
+
+负面：
+japanese, kimono, samurai, chinese opera makeup, neon, modern buildings,
+plastic texture, oversaturated, cartoon, anime, extra fingers, deformed hands,
+distorted weapon, text, watermark, logo
+
+
+--------------------------------------------------------
+B · 绘画 / 动画感 —— 删掉所有摄影词，负面里也去掉 cartoon/anime
+--------------------------------------------------------
+animated ink-wash wuxia, traditional Chinese guohua painting style,
+painterly 2D-3D blend, Ming dynasty China,
+muted palette of slate grey / ink black / faded indigo, warm amber lamplight accents,
+flowing mist, hand-painted texture, visible brush strokes,
+slow deliberate camera
+[画幅：16:9 / 2.39:1]
+
+负面：
+japanese, kimono, samurai, chinese opera makeup, neon, modern buildings,
+photorealistic, 3d render, plastic texture, oversaturated,
+extra fingers, deformed hands, distorted weapon, text, watermark, logo
+
+
+--------------------------------------------------------
+色调与天气档位（按段落气质选）
+--------------------------------------------------------
+沉郁苍凉  青灰+墨黑    阴天/薄雾/残雪    命运感、抉择、失意 ★
+肃杀      冷蓝+高对比  月夜/雨夜          对峙、追杀、夜行
+庄重压抑  暗红+赭石    殿内烛火/逆光      官场、朝堂、审讯
+荒寒      灰白+极低饱和 大雪/风沙         边塞、放逐、独行
+短暂暖意  暖黄         灯下/炉火          全片只给 1~2 次，对比才有力 ★
+
+⚠️ 雨、雪、雾、大风：AI 效果最好又最出武侠味，优先用，还能掩盖瑕疵。
