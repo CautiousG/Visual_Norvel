@@ -1,21 +1,21 @@
 {
   "generated": "2026-09-03",
   "stats": {
-    "nodes": 28,
-    "edges": 84,
+    "nodes": 34,
+    "edges": 110,
     "type_count": {
-      "敌意": 11,
-      "恩义": 14,
-      "其他": 27,
-      "同袍": 9,
-      "情感": 10,
-      "师承": 4,
-      "血缘": 9
+      "敌意": 16,
+      "恩义": 17,
+      "其他": 37,
+      "同袍": 13,
+      "情感": 11,
+      "师承": 5,
+      "血缘": 11
     },
     "source_count": {
-      "truth": 48,
-      "wikilink": 21,
-      "card": 15
+      "truth": 59,
+      "wikilink": 29,
+      "card": 22
     }
   },
   "nodes": [
@@ -48,6 +48,18 @@
       "is_protagonist": true,
       "color": "#C98A2B",
       "path": "01_source_and_script/wiki/characters/卢云.md"
+    },
+    {
+      "id": "哲尔丹",
+      "label": "哲尔丹",
+      "tags": [
+        "配角",
+        "鞑靼",
+        "武将"
+      ],
+      "is_protagonist": false,
+      "color": "#8A9BA8",
+      "path": "01_source_and_script/wiki/characters/哲尔丹.md"
     },
     {
       "id": "天绝僧",
@@ -114,6 +126,18 @@
       "path": "01_source_and_script/wiki/characters/方子敬.md"
     },
     {
+      "id": "李铁衫",
+      "label": "李铁衫",
+      "tags": [
+        "配角",
+        "怒苍",
+        "五虎"
+      ],
+      "is_protagonist": false,
+      "color": "#B3372E",
+      "path": "01_source_and_script/wiki/characters/李铁衫.md"
+    },
+    {
       "id": "杨肃观",
       "label": "杨肃观",
       "tags": [
@@ -166,6 +190,18 @@
       "path": "01_source_and_script/wiki/characters/琼武川.md"
     },
     {
+      "id": "琼翊",
+      "label": "琼翊",
+      "tags": [
+        "配角",
+        "琼家",
+        "第二代"
+      ],
+      "is_protagonist": false,
+      "color": "#8A9BA8",
+      "path": "01_source_and_script/wiki/characters/琼翊.md"
+    },
+    {
       "id": "琼芳",
       "label": "琼芳",
       "tags": [
@@ -211,6 +247,18 @@
       "is_protagonist": false,
       "color": "#C9A227",
       "path": "01_source_and_script/wiki/characters/秦霸先.md"
+    },
+    {
+      "id": "罗摩什",
+      "label": "罗摩什",
+      "tags": [
+        "配角",
+        "西域",
+        "反派"
+      ],
+      "is_protagonist": false,
+      "color": "#8A9BA8",
+      "path": "01_source_and_script/wiki/characters/罗摩什.md"
     },
     {
       "id": "胡媚儿",
@@ -290,6 +338,30 @@
       "is_protagonist": false,
       "color": "#8A9BA8",
       "path": "01_source_and_script/wiki/characters/阿秀.md"
+    },
+    {
+      "id": "陆孤瞻",
+      "label": "陆孤瞻",
+      "tags": [
+        "配角",
+        "怒苍",
+        "五虎"
+      ],
+      "is_protagonist": false,
+      "color": "#B3372E",
+      "path": "01_source_and_script/wiki/characters/陆孤瞻.md"
+    },
+    {
+      "id": "青衣秀士",
+      "label": "青衣秀士",
+      "tags": [
+        "配角",
+        "怒苍",
+        "军师"
+      ],
+      "is_protagonist": false,
+      "color": "#C77D4F",
+      "path": "01_source_and_script/wiki/characters/青衣秀士.md"
     },
     {
       "id": "韩毅",
@@ -379,6 +451,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "李铁衫",
+      "to": "伍定远",
+      "type": "恩义",
+      "desc": "铁剑山庄收留逃亡的伍定远",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "收留其逃亡的义庄主。",
+      "evidence": "vol01",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "伍定远",
@@ -503,6 +587,18 @@
       "rev_desc": ""
     },
     {
+      "from": "陆孤瞻",
+      "to": "伍定远",
+      "type": "恩义",
+      "desc": "「八十三命」质问的镜像（儒将与杀业的对照）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "八十三命追问的镜像（仁心与杀业的对照）。",
+      "evidence": "vol21 第二章",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "齐润翔",
       "to": "伍定远",
       "type": "恩义",
@@ -524,6 +620,18 @@
       "rev_desc": ""
     },
     {
+      "from": "李铁衫",
+      "to": "卓凌昭",
+      "type": "敌意",
+      "desc": "剑争之败的对手（铁剑震天南）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "剑争之败的对手。",
+      "evidence": "vol01 第六章",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "卓凌昭",
       "to": "杨肃观",
       "type": "其他",
@@ -541,6 +649,18 @@
       "dir_desc": "",
       "rev_desc": "灭门血案的仇敌（昆仑）。",
       "evidence": "vol01",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "哲尔丹",
+      "to": "卢云",
+      "type": "敌意",
+      "desc": "翁金城三重惧之夜的异域强者对峙",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "三重惧之夜的对峙/映照。",
+      "evidence": "vol09 第一章",
       "curve": [],
       "curve_raw": ""
     },
@@ -752,6 +872,18 @@
       "rev_desc": ""
     },
     {
+      "from": "陆孤瞻",
+      "to": "卢云",
+      "type": "师承",
+      "desc": "太湖老丐传「无双连拳」的授艺恩人",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "传「无双连拳」的授艺恩人（老丐陆爷）。",
+      "evidence": "vol02",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "卢云",
       "to": "顾倩兮",
       "type": "情感",
@@ -781,6 +913,24 @@
         }
       ],
       "curve_raw": "1..2:情感|初恋; 3..6:悬|旧情隔绝; 7:情感|重逢"
+    },
+    {
+      "from": "哲尔丹",
+      "to": "秦仲海",
+      "type": "敌意",
+      "desc": "北线战场敌我。",
+      "source": "card",
+      "dir_desc": "北线战场敌我。",
+      "rev_desc": ""
+    },
+    {
+      "from": "哲尔丹",
+      "to": "萨魔",
+      "type": "敌意",
+      "desc": "同为异域武者，气质对照。 / 北疆勇士（三重惧场景同框，通常敌对或钳制）。",
+      "source": "card",
+      "dir_desc": "同为异域武者，气质对照。",
+      "rev_desc": "北疆勇士（三重惧场景同框，通常敌对或钳制）。"
     },
     {
       "from": "天绝僧",
@@ -954,6 +1104,54 @@
       "curve_raw": ""
     },
     {
+      "from": "李铁衫",
+      "to": "石刚",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "李铁衫",
+      "to": "秦仲海",
+      "type": "同袍",
+      "desc": "怒苍五虎同袍",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "",
+      "evidence": "vol11–vol14",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "李铁衫",
+      "to": "陆孤瞻",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "李铁衫",
+      "to": "韩毅",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "李铁衫",
+      "to": "齐润翔",
+      "type": "同袍",
+      "desc": "铁剑庄主（收留流亡者的怒苍旧部）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "铁剑庄主（收留流亡者的怒苍旧部）。"
+    },
+    {
       "from": "杨肃观",
       "to": "柳昂天",
       "type": "同袍",
@@ -1043,6 +1241,15 @@
     },
     {
       "from": "杨肃观",
+      "to": "罗摩什",
+      "type": "其他",
+      "desc": "权谋线交错（大掌柜买早点段，vol17 相关）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "权谋线交错（大掌柜买早点段，vol17 相关）。"
+    },
+    {
+      "from": "杨肃观",
       "to": "胡媚儿",
       "type": "情感",
       "desc": "胡媚儿痴缠，爱恨交织",
@@ -1113,6 +1320,15 @@
     },
     {
       "from": "杨肃观",
+      "to": "青衣秀士",
+      "type": "敌意",
+      "desc": "朝廷智者的镜像（智谋线上隐隐对立）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "朝廷智者的镜像（智谋线上隐隐对立）。"
+    },
+    {
+      "from": "杨肃观",
       "to": "顾倩兮",
       "type": "情感",
       "desc": "追求并终娶为妻",
@@ -1163,6 +1379,18 @@
       "rev_desc": ""
     },
     {
+      "from": "罗摩什",
+      "to": "江充",
+      "type": "同袍",
+      "desc": "投靠江充的鹰犬（汗国国师→江充党）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "投靠的主子（江充鹰犬）。",
+      "evidence": "vol05；vol08",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "江充",
       "to": "胡媚儿",
       "type": "血缘",
@@ -1170,6 +1398,18 @@
       "source": "card",
       "dir_desc": "",
       "rev_desc": "主子（江充鹰犬）。"
+    },
+    {
+      "from": "琼翊",
+      "to": "琼武川",
+      "type": "血缘",
+      "desc": "子与父（琼家两代，威权国丈之子）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "父亲（琼家权威、镇国铁卫三当家）。",
+      "evidence": "vol17",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "琼芳",
@@ -1190,6 +1430,27 @@
       "desc": "孙女恋情对象（家族阻力）。",
       "source": "card",
       "dir_desc": "孙女恋情对象（家族阻力）。",
+      "rev_desc": ""
+    },
+    {
+      "from": "琼翊",
+      "to": "琼芳",
+      "type": "血缘",
+      "desc": "父亲与女儿（幼年目睹其饮毒酒自尽）",
+      "source": "truth",
+      "dir_desc": "女儿（幼女目送其饮毒酒，终身心影）。",
+      "rev_desc": "",
+      "evidence": "vol17 楔子",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "琼翊",
+      "to": "苏颖超",
+      "type": "情感",
+      "desc": "女儿恋人（间接关联）。",
+      "source": "card",
+      "dir_desc": "女儿恋人（间接关联）。",
       "rev_desc": ""
     },
     {
@@ -1227,6 +1488,24 @@
       "evidence": "vol00",
       "curve": [],
       "curve_raw": ""
+    },
+    {
+      "from": "石刚",
+      "to": "陆孤瞻",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "石刚",
+      "to": "青衣秀士",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
     },
     {
       "from": "石刚",
@@ -1304,6 +1583,30 @@
       "curve_raw": "待续"
     },
     {
+      "from": "陆孤瞻",
+      "to": "秦仲海",
+      "type": "同袍",
+      "desc": "怒苍五虎同袍，儒将之仁与怒王暴烈",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "怒苍之主，五虎同袍。",
+      "evidence": "vol11–vol21",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "青衣秀士",
+      "to": "秦仲海",
+      "type": "恩义",
+      "desc": "怒苍军师，点破「你已经是秦霸先了」",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "怒苍之主，其军师/点破身世者。",
+      "evidence": "vol13 第二章",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "秦仲海",
       "to": "韩毅",
       "type": "恩义",
@@ -1322,6 +1625,24 @@
       "desc": "",
       "source": "wikilink",
       "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "罗摩什",
+      "to": "胡媚儿",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "罗摩什",
+      "to": "银川公主",
+      "type": "其他",
+      "desc": "和亲线（汗国）关联。",
+      "source": "card",
+      "dir_desc": "和亲线（汗国）关联。",
       "rev_desc": ""
     },
     {
@@ -1360,6 +1681,24 @@
         }
       ],
       "curve_raw": "5..6:血缘|养母养子; 7:情感|逐子后相依"
+    },
+    {
+      "from": "陆孤瞻",
+      "to": "青衣秀士",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "陆孤瞻",
+      "to": "韩毅",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
     }
   ]
 }
