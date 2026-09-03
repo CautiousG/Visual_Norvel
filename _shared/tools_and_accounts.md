@@ -1,5 +1,15 @@
 # 工具与账号（跨作品共用，填一次反复查）
 
+## 本地工具（仓库自带，跨作品共用）
+| 用途 | 入口 | 说明 |
+|------|------|------|
+| 知识图谱（全量） | `tools/wiki-graph.cmd <wiki> [--report]` | 从 wiki 的 `[[wikilinks]]`+tags 生成 `works/<作品>/graph/graph.html`（vis.js 交互图），含卷/母题/候选段全部页面 |
+| 人物关联图 | `python tools/character_graph.py --wiki <wiki>` | 只取 character 类型页面；优先读取 `characters/_relations.md` 真值表，生成按关系类型着色、带核心/主线快捷视图的 `works/<作品>/graph/characters.html` |
+| 漫画风批量 | `tools/refresh.py` | 刷新全库（LLM_wiki 移植，需时再启用） |
+
+> 用法示例：`tools/wiki-graph.cmd works/heroic_saga/01_source_and_script/wiki --report`
+> 注意：`graph.py` 需 Python 3.10+；输出位置固定为 wiki 上级的上级 `graph/`（各作共享，别手改）。
+
 ## 生成工具（图生视频优先，保角色一致性）
 | 用途 | 工具 | 账号/入口 | 额度/计费 | 备注 |
 |------|------|-----------|-----------|------|
