@@ -46,8 +46,15 @@ Visual_Norvel/
 所有作品仅限**本地个人欣赏**：不上传（含网盘公开链接、平台「仅自己可见」与草稿箱）、不分享、不变现。成片文件名统一标 `PERSONAL_ONLY`。
 
 ## 关于 GitHub 仓库
-本仓库为**私有仓**（private-only），仅用于跨机器同步本人工作台。**受版权保护的内容一律不入库**（见 `.gitignore`）：
-- 各作 `01_source_and_script/source/`（原著全文 epub/txt/md）—— **绝对不上传**。
+本仓库为**私有仓**（private-only），用于本人及少量授权协作者同步工作台。**受版权保护的内容一律不入库**（见 `.gitignore`）：
+- 各作 `01_source_and_script/source/`（原著全文 epub/txt/md）—— **绝对不上传**。协作者需自行获取 epub 并本地生成，见 [`docs/COLLABORATION.md`](docs/COLLABORATION.md)。
 - `04_generated/` / `05_audio/` / `06_edit/` / `07_final/`（生产素材与成片）—— 体量大且属 `PERSONAL_ONLY`。
 
 `wiki/` 消化层（含衍生梗概与逐字金句摘录）虽属衍生内容仍有版权风险，因此仓库仅私有，**禁止转公开**。
+
+## 协作规则（多人参与时）
+- 授权协作者：见仓库 Settings → Collaborators。
+- 成品**仅授权协作者本地欣赏**，不外传、不发布、不变现——[全局红线](#-全局红线)对每位协作者同样成立。
+- 原著文本**不通过仓库/云盘传递**，各自本地获取。
+- 生成素材（图/视频）**不入仓库**；`raw/` 各自本地留存，只交换选中的 `picked/` 与旁白/剪辑工程（通过线下或私密渠道）。
+- 上手流程见 [`docs/COLLABORATION.md`](docs/COLLABORATION.md)。

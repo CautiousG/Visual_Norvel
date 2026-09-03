@@ -22,6 +22,15 @@ _tmp_epub/
 *.prproj
 *.drp
 
+# ───────── 敏感 / 本地私有覆盖 ─────────
+# 协作者填 API key / 账号请改这些文件，不入库
+*.local.md
+*.local.txt
+*.local.json
+.env
+.env.*
+secrets/
+
 # ───────── 临时 / 系统 ─────────
 .DS_Store
 Thumbs.db
