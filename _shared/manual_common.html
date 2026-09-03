@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《英雄志》AI 视频制作手册 — 本地自用</title>
+<title>AI 视频改编 · 通用制作手册 — 本地自用</title>
 <style>
   :root{
     --primary:#E8F0FE; --success:#E6F4EA; --decision:#FEF7E0; --error:#FCE8E6;
@@ -94,7 +94,7 @@
 <body>
 
 <aside class="sidebar" id="sidebar">
-  <div class="brand"><b>《英雄志》AI 视频制作手册</b><span>本地自用 · 不传播</span></div>
+  <div class="brand"><b>AI 视频改编 · 通用手册</b><span>本地自用 · 不传播</span></div>
   <nav id="toc"></nav>
 </aside>
 
@@ -103,19 +103,20 @@
   <button class="menu-btn" id="menuBtn" title="目录">☰</button>
   <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">展开全部</button>
   <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">折叠全部</button>
-  <button onclick="if(confirm('清空所有勾选？')){localStorage.removeItem('yxz_chk');location.reload()}">清空勾选</button>
+  <button onclick="if(confirm('清空所有勾选？')){localStorage.removeItem('vn_common_chk');location.reload()}">清空勾选</button>
   <button onclick="window.print()">打印 / 存 PDF</button>
   <span class="muted" style="margin-left:auto;align-self:center">勾选状态自动保存在本机浏览器</span>
 </div>
 <div class="wrap">
 
-<h1>《英雄志》AI 视频制作手册</h1>
-<p class="muted">用途：<strong>个人本地观看，不传播、不上传、不变现</strong>　|　通用方法论详见 <a href="../../../_shared/manual_common.html"><code>_shared/manual_common.html</code></a>　|　消化层入口 <a href="../01_source_and_script/wiki/index.md"><code>wiki/</code></a></p>
+<h1>AI 视频改编 · 通用制作手册</h1>
+<p class="muted">通用方法论。<strong>各作品专属内容（人物分期 / 场景类型 / 选段候选 / 母题金句）见 <code>works/&lt;作品&gt;/00_project/manual.html</code></strong>。</p>
+<p class="muted">用途：<strong>个人本地观看，不传播、不上传、不变现</strong></p>
 
 <div class="banner b-err">
   <strong>🔴 使用前提（请始终记住）</strong>
   <ul style="margin:8px 0 0">
-    <li>《英雄志》著作权属孙晓，处于保护期内。本项目仅限<strong>本地个人欣赏</strong>。</li>
+    <li>所改编原著若处于著作权保护期，本项目仅限<strong>本地个人欣赏</strong>。</li>
     <li><strong>不上传</strong>任何平台 —— 包括网盘公开链接、以及各视频平台的「仅自己可见」和草稿箱（<strong>那也已构成上传并留下记录</strong>）。</li>
     <li><strong>不分享</strong>给任何第三方，不在群聊/朋友圈发布片段。</li>
     <li><strong>不变现</strong>，不接广告、不引流、不做付费内容。</li>
@@ -123,131 +124,101 @@
   </ul>
 </div>
 
-<h2>一、《英雄志》作品仓目录</h2>
-<p>本作在 <code>works/heroic_saga/</code>，与工作台其他部分（<code>_shared/</code>）共享通用件。⚠️ <strong>原著全文与生成素材不入 git</strong>，见 <code>.gitignore</code>。</p>
+<h2>一、工作台目录结构（两层架构）</h2>
+<p>Visual_Norvel 采用「共享 + 隔离」两层结构：通用件放 <code>_shared/</code>，每部作品独立仓 <code>works/&lt;作品英文名&gt;/</code>。原著文本、参考图、生成素材<strong>只在作品仓内且不入 git</strong>。</p>
 
-<pre>works/heroic_saga/
-├── 00_project/
-│   ├── README.txt              ← 本作红线声明
-│   ├── manual.html             ← 本文件（英雄志专属）
-│   └── progress.md             ← 进度 + 选段登记
-│
-├── 01_source_and_script/
-│   ├── source/                 ⚠️ 原著全文（epub + text/vol00-22.md），本地生成、不入 git
-│   ├── wiki/                   ⭐ 全书消化层，见第二节末
-│   │   ├── overview.md         全书主线综述（L2）
-│   │   ├── candidates.md       ⭐ 160 段高光候选（真分排序 + 首支建议）
-│   │   ├── status.md           消化深度追踪 + 日志
-│   │   ├── volumes/vol00-22.md 23 卷梗概 + 逐章
-│   │   ├── characters/         四主角深挖 + 400+ 配角索引
-│   │   └── themes/             7 母题 + 逐字金句
-│   ├── EP01_剧本.md
-│   └── EP01_分镜表.csv         从 _shared/_templates/shotlist_template.csv 复制
-│
-├── 02_characters/              定妆卡（人物名/阶段/参考图 3 张/提示词）
-│   ├── 卢云_书生期/  卢云_逃犯期/  卢云_官员期/  卢云_悟道期/
-│   ├── 伍定远_西凉期/  伍定远_京城期/  ...
-│   ├── 杨肃观_...  秦仲海_公子期/  秦仲海_修罗期/  ...
-│   └── 配角（本次选段涉及的）
-│
-├── 03_style_and_scenes/        本作场景库（明代考据引用 _shared/refs）
-├── 04_generated/EP01/          raw/ 全部生成 · picked/ 挑中的 · 生成记录.csv
-├── 05_audio/                   旁白 / 配音（音效·BGM 引用 _shared）
-├── 06_edit/                    EP01.prproj / .drp · 字幕/EP01.srt
-└── 07_final/                   EP01_PERSONAL_ONLY.mp4</pre>
+<pre>Visual_Norvel/
+├── README.md                    工作台说明 + 全局红线
+├── docs/COLLABORATION.md        协作者上手指南
+├── _shared/                     跨作品共享（一份，反复用）
+│   ├── manual_common.html       本文件（通用方法论）
+│   ├── style_presets.txt        风格模板库（写实电影感 A / 绘画动画 B）
+│   ├── prompt_snippets.txt      负面词/运镜/天气/景别/打斗三段式
+│   ├── tools_and_accounts.md    工具·账号·TTS·BGM 来源（勿填密钥）
+│   ├── _templates/              空白模板：角色卡·分镜表·生成记录·README·进度
+│   ├── sfx/  bgm/  refs/        音效·BGM·朝代考据
+└── works/&lt;作品&gt;/                每部一座隔离仓
+    ├── 00_project/
+    │   ├── README.txt
+    │   ├── manual.html          ← 本作品专属手册（人物分期/场景/选段候选）
+    │   └── progress.md          进度记录 + 选段登记
+    ├── 01_source_and_script/
+    │   ├── source/              ⚠️ 原著文本(epub/text)，不入 git、不外传
+    │   ├── wiki/                消化层：overview/candidates/characters/themes/volumes
+    │   └── EP01_剧本.md / _分镜表.csv
+    ├── 02_characters/           定妆卡：参考图(3张) + 固定提示词
+    ├── 03_style_and_scenes/     场景库、色卡（本作特有）
+    ├── 04_generated/            raw/ 全部生成含废片 · picked/ 挑中的 · 生成记录.csv
+    ├── 05_audio/                旁白 / 配音（音效·BGM 引用 _shared）
+    ├── 06_edit/                 剪辑工程 + 字幕
+    └── 07_final/                成片，文件名标 PERSONAL_ONLY</pre>
 
 <div class="banner b-pri">
-  <strong>💡 目录要点</strong>
+  <strong>💡 三个设计要点</strong>
   <ul style="margin:8px 0 0">
     <li><code>raw/</code> 与 <code>picked/</code> 分开 —— 单镜头要生成 3~10 次，混在一起三天后你就找不到哪条是选中的。</li>
     <li><code>生成记录.csv</code> 记下<strong>提示词 + 随机种子 + 所用参考图</strong> —— 种子能在<strong>同一工具、同一提示词</strong>下重现或微调某一次生成；而<strong>跨镜头保持同一角色形象，靠的是锁定的参考图（图生视频），不是种子</strong>。两样都要记。</li>
-    <li><strong>02_characters 按人物阶段分</strong>（不只按人物）—— 英雄志跨度极长，同一角色不同阶段外貌/气质差别巨大，各阶段独立一套参考图。</li>
+    <li><strong>共享 vs 隔离判据</strong>：「下一部作品还用得上吗？」用得上 → <code>_shared/</code>；换一部就作废或必须重做 → <code>works/&lt;作品&gt;/</code>。</li>
   </ul>
 </div>
 
-<h2>二、《英雄志》这本书特有的难点</h2>
+<h2>二、原著特有难点（每作各自梳理）</h2>
+
+<p>不同小说有不同的改编难点。<strong>做每部作品前，先在本作的 <code>manual.html</code> 里列一张「本书特有难点」表</strong>，标注 P0/P1/P2 优先级与应对，能省下大量后期返工。</p>
+
+<p>常见的通用难点类型（可作起手模板）：</p>
 
 <table>
-  <tr><th style="width:22px"></th><th>难点</th><th>为什么难</th><th>应对</th></tr>
+  <tr><th style="width:22px"></th><th>难点类型</th><th>典型表现</th><th>通用应对</th></tr>
   <tr>
     <td><span class="tag t-p0">P0</span></td>
-    <td><strong>篇幅极长</strong></td>
-    <td>全书体量巨大，任何「完整改编」的想法都不现实</td>
-    <td>⭐ <strong>放弃全书，只做 1~3 个你最爱的段落</strong>。见第三节</td>
+    <td><strong>篇幅体量</strong></td>
+    <td>长篇小说（&gt;50 万字）根本做不完整改编</td>
+    <td>⭐ <strong>只做 1~3 个高光段落</strong>，见第三节</td>
   </tr>
   <tr>
     <td><span class="tag t-p0">P0</span></td>
-    <td><strong>四线并进</strong></td>
-    <td>卢云、伍定远、杨肃观、秦仲海各有主线，交错推进</td>
-    <td>单集<strong>只跟一条线</strong>，别在 5 分钟里切四个人</td>
+    <td><strong>多线并进</strong></td>
+    <td>多主角/多支线交错推进</td>
+    <td>单集<strong>只跟一条人物线</strong>，别在 5 分钟切多个视角</td>
   </tr>
   <tr>
     <td><span class="tag t-p0">P0</span></td>
-    <td><strong>核心是「思辨」不是「打」</strong></td>
-    <td>这本书的分量在人物抉择、正邪之辨、命运感 —— <strong>这些没有画面</strong></td>
-    <td>⭐ 这反而是好消息：靠<strong>旁白 + 特写 + 空镜</strong>就能承载，AI 正好擅长</td>
+    <td><strong>核心是"思辨/情感"而非动作</strong></td>
+    <td>分量在人物抉择、道德冲突、命运感——<strong>这些没有画面</strong></td>
+    <td>⭐ 好消息：靠<strong>旁白 + 特写 + 空镜</strong>就能承载，AI 正好擅长</td>
   </tr>
   <tr>
     <td><span class="tag t-p1">P1</span></td>
-    <td><strong>明代考据</strong></td>
-    <td>官场戏多，官服、补子、乌纱帽、飞鱼服、儒生青衫都不能穿错</td>
-    <td>提前建 <code>明代服饰考据/</code>，写进风格模板</td>
+    <td><strong>朝代/时代考据</strong></td>
+    <td>服饰、建筑、礼仪不能穿错时代</td>
+    <td>先建考据库（<code>_shared/refs/&lt;朝代&gt;/</code>），写进风格模板</td>
   </tr>
   <tr>
     <td><span class="tag t-p1">P1</span></td>
     <td><strong>群戏与大场面</strong></td>
-    <td>朝堂、军阵、山寨聚义 —— AI 生成多人场景极易崩坏</td>
+    <td>朝堂、军阵、聚义——AI 多人场景极易崩坏</td>
     <td>用<strong>剪影、俯拍远景、局部特写</strong>暗示规模，绝不正面拍人群脸</td>
   </tr>
   <tr>
     <td><span class="tag t-p1">P1</span></td>
-    <td><strong>角色跨越多年</strong></td>
-    <td>四主角外貌/气质<strong>随身份剧变</strong>——不是随年龄慢慢老，而是断层式转变</td>
-    <td>角色卡<strong>按阶段拆</strong>，各阶段独立参考图。参考分期（读全书后实证）：<br>
-    · <strong>卢云</strong>：书生期（vol02，青衫落第）→ 逃犯期（vol02-08，卖面浪迹）→ 官员期（vol08-14，朝服）→ 悟道期（vol14+，弃官投怒苍）<br>
-    · <strong>秦仲海</strong>：公子期（vol03，尚书府贵胄）→ 残废期（vol10-11，废人绝境）→ 修罗期（vol11+，重建怒苍首领）<br>
-    · <strong>伍定远</strong>：西凉捕头 → 逃亡期 → 京城制使 → 重生期（vol06 伏羲宝池后）<br>
-    · <strong>杨肃观</strong>：司郎中 → 官场势力代表（各阶段仍为官服，气质渐变）<br>
-    详见 <code>wiki/characters/</code>。
-    </td>
+    <td><strong>角色跨越长时间线</strong></td>
+    <td>人物形象随年龄/境遇变化（少年→中年、落魄→显赫）</td>
+    <td>角色卡按<strong>阶段</strong>分：每阶段独立参考图与提示词</td>
   </tr>
   <tr>
     <td><span class="tag t-p2">P2</span></td>
-    <td>武功具体形制</td>
-    <td>原著招式描写细致（无双连拳、天诀、萨魔…），AI 无法准确呈现</td>
-    <td>不追求「像」，只保留<strong>1~2 个招式名念出来</strong>，画面走三段式（见第八节）</td>
+    <td>类型化动作（武打/魔法/机甲）</td>
+    <td>原著描写细致，AI 无法准确呈现</td>
+    <td>不追求"像"，保留 1~2 个术语念出来，画面走三段式（见第八节）</td>
   </tr>
 </table>
 
 <div class="banner b-dec">
-  <strong>⚠️ 一句最该听的劝</strong><br>
-  这本书打动你的地方，大概率<strong>不是打得多好看，而是某个人物在某个瞬间的抉择</strong>。所以别去拍武侠动作片 ——
+  <strong>⚠️ 一句最该听的通用劝</strong><br>
+  打动你的地方，大概率<strong>不是动作或奇观，而是某个人物在某个瞬间的抉择</strong>。所以别去硬拍类型片 ——
   <strong>做成「有声漫 / 影像散文」形态，用旁白承载思辨、用画面承载氛围</strong>，成品质量会比硬做动作高出一个量级，工作量还少三分之二。
 </div>
-
-<div class="banner b-pri">
-  <strong>💡 全书消化层已就位 → <code>wiki/</code></strong>
-  <ul style="margin:8px 0 0">
-    <li><a href="../01_source_and_script/wiki/overview.md"><code>overview.md</code></a>：全书主线综述（四线人物 + 卷脉络 + 势力 + 母题）。</li>
-    <li><a href="../01_source_and_script/wiki/candidates.md"><code>candidates.md</code></a>：⭐ 160 段高光候选（真分排序 + 首支建议）。做选段直接从这里挑。</li>
-    <li><a href="../01_source_and_script/wiki/volumes"><code>volumes/vol00-22.md</code></a>：23 卷梗概含逐章。</li>
-    <li><a href="../01_source_and_script/wiki/characters"><code>characters/</code></a>：四主角深挖 + <code>_配角索引.md</code>（400+ 配角按卷分布）。</li>
-    <li><a href="../01_source_and_script/wiki/themes"><code>themes/</code></a>：7 母题（正邪之辨/忠义/天命王道/英雄的定义/气节与生死/报应轮回/仁政与民本），<strong>含逐字金句 + 出处</strong>——旁白直接抽用。</li>
-  </ul>
-</div>
-
-<h3>《英雄志》常见场景类型（读全书后实证）</h3>
-<p>下面这些是原著出现频次高的场景，建议提前建 <code>03_style_and_scenes/</code> 与 <code>_shared/refs/ming/</code> 考据。选段前先看看落在哪几类：</p>
-<table>
-  <tr><th>场景类</th><th>典型出处</th><th>视觉/考据要点</th></tr>
-  <tr><td><strong>京城/朝堂</strong></td><td>vol03/08/09/14+</td><td>紫禁城、金水桥、文渊阁、殿柱；官服/补子/乌纱/飞鱼服严格考据</td></tr>
-  <tr><td><strong>大牢/公堂</strong></td><td>vol02 卢云案 / vol03 火贪一刀</td><td>阴湿石牢、镣铐、单窗漏光——"牢中望雪"级情绪场</td></tr>
-  <tr><td><strong>怒苍山</strong></td><td>vol11 重建怒苍 / vol13/20</td><td>山寨、木寨、旗帜、火把；聚义/朝会大场面用剪影俯拍</td></tr>
-  <tr><td><strong>西域/边塞/雪原</strong></td><td>vol01 西凉 / vol05 西出阳关</td><td>大漠、玉门关、雪山（明月出天山）；荒寒色调档</td></tr>
-  <tr><td><strong>黄河/大河/海</strong></td><td>vol11 黄河坠水 / vol13 海上孤鸿 / vol17 京杭大河</td><td>寒夜黄河 + 冰块 + 繁星是英雄志标志画面之一</td></tr>
-  <tr><td><strong>观海云远</strong></td><td>vol17 起</td><td>神秘门派据点；具体场景考据待深挖</td></tr>
-  <tr><td><strong>市井/客栈</strong></td><td>vol02 扬州 / vol03 大卤面</td><td>市集、纤夫码头、饭馆——生活流场景</td></tr>
-</table>
 
 <h2>三、选段：先决定做哪一段</h2>
 <p>不要从第一章开始。请按下面三个标准，从你最爱的桥段里挑：</p>
@@ -269,19 +240,8 @@
 
 <div class="banner b-ok">
   <strong>✅ 建议第一支就做「单人独白型」段落</strong> —— 一个人、一个场景、一段心境。
-  这类段落 AI 完成度最高（<strong>特写 + 空镜 + 旁白</strong>），最能验证角色形象与风格模板是否立得住。
-</div>
-
-<div class="banner b-pri">
-  <strong>💡 首支候选（<a href="../01_source_and_script/wiki/candidates.md"><code>wiki/candidates.md</code></a> 全书深读评分产出，均满分 15 单人段）</strong>
-  <ul style="margin:8px 0 0">
-    <li><strong>牢中望雪·乱世文章不值钱</strong>（vol02›第一章 落第秀才 · 卢云）—— 开篇卷、一景一人，最易上手</li>
-    <li><strong>山顶立誓·飘然北去</strong>（vol02›第八章 天地一沙鸥 · 卢云）—— 画面开阔 + 情绪爆发，收束感强</li>
-    <li><strong>黄河坠水绝唱</strong>（vol11›第一章 爷爷生在天地间 · 秦仲海）—— 寒夜黄河 + 冰块 + 繁星，标志画面</li>
-    <li><strong>一代真龙海中生</strong>（vol06›第七章 · 伍定远）—— 强仪式感 + 纯单人华彩</li>
-    <li><strong>杨肃观独处砸茶杯</strong>（vol12›第二章 初生之犊）—— 罕见独处崩溃，人物弧线关键切片</li>
-  </ul>
-  <p style="margin:8px 0 0">上表只是精选，全书 <strong>160 段候选</strong>按合计分排序都在 <code>candidates.md</code>。</p>
+  例如某人在雨夜/雪中独处、或做出重大决定前的那一刻。这类段落 AI 完成度最高（<strong>特写 + 空镜 + 旁白</strong>），
+  而且最能验证你的角色形象与风格模板是否立得住。做完这一支再决定要不要上大场面。
 </div>
 
 <h2>四、角色设定表（一致性的唯一解）</h2>
@@ -320,15 +280,8 @@
 可用种子号：
 备注（易崩点）：</pre>
 
-<h3>四主角登记进度</h3>
-<ul class="chk" data-g="role">
-  <li><input type="checkbox" id="r1"><label for="r1"><strong>卢云</strong> — 角色卡完成 / 参考图 3 张 / 提示词固定</label></li>
-  <li><input type="checkbox" id="r2"><label for="r2"><strong>伍定远</strong> — 同上</label></li>
-  <li><input type="checkbox" id="r3"><label for="r3"><strong>杨肃观</strong> — 同上</label></li>
-  <li><input type="checkbox" id="r4"><label for="r4"><strong>秦仲海</strong> — 同上</label></li>
-  <li><input type="checkbox" id="r5"><label for="r5">本次选段涉及的<strong>配角</strong>全部建卡</label></li>
-  <li><input type="checkbox" id="r6"><label for="r6">四人<strong>并排放在一起对比过</strong> —— 确认气质区分明显、不会混淆</label></li>
-</ul>
+<h3>主角登记进度（本作填）</h3>
+<p class="muted">具体主角名单与登记项在<strong>本作 <code>manual.html</code></strong> 中列出（每主角需：角色卡完成 / 参考图 3 张 / 提示词固定），并对齐"主角之间主色与轮廓互不重叠"。</p>
 
 <div class="banner b-pri">
   <strong>💡 四主角要「一眼可辨」</strong><br>
@@ -393,7 +346,7 @@ distorted weapon, text, watermark, logo
   <tr><td>招式名称与过程</td><td>🟡 留 1~2 个念出来，过程全砍</td></tr>
   <tr><td>插叙往事</td><td>🟡 挪到后面做悬念，或删</td></tr>
   <tr><td><strong>对白</strong></td><td>✅ <strong>最该保留的</strong>，但每句都再缩短</td></tr>
-  <tr><td>议论与感慨</td><td>⭐ <strong>这是《英雄志》的魂，务必保留</strong> —— 交给旁白，配空镜</td></tr>
+  <tr><td>议论与感慨</td><td>⭐ <strong>如果这是本书的"魂"，务必保留</strong> —— 交给旁白，配空镜（金句可从 <code>wiki/themes/</code> 摘）</td></tr>
 </table>
 
 <p><strong>判断标准一句话：这句话能不能变成画面或声音？不能，就砍 —— 除非它是这段的魂。</strong></p>
@@ -469,7 +422,7 @@ distorted weapon, text, watermark, logo
   <tr><td>长段对白</td><td>⭐ 多用<strong>背身、侧脸、手部、听者反应</strong> —— 规避口型不同步</td></tr>
 </table>
 
-<h2>九、音频清单 —— 这本书的一半在声音里</h2>
+<h2>九、音频清单 —— 有声漫/影像散文的一半在声音里</h2>
 
 <h3>旁白</h3>
 <table>
@@ -552,7 +505,7 @@ distorted weapon, text, watermark, logo
   <li><input type="checkbox" id="c22"><label for="c22">确认全程用<strong>图生视频</strong>，不用纯文生视频</label></li>
   <li><input type="checkbox" id="c23"><label for="c23">主角之间<strong>主色与轮廓互不重叠</strong>，一眼可辨</label></li>
   <li><input type="checkbox" id="c24"><label for="c24">风格模板 + 负面提示词定稿，已拿 3 个镜头试跑</label></li>
-  <li><input type="checkbox" id="c25"><label for="c25">明代服饰/建筑考据图已收集，<strong>不会出现和风或戏曲妆</strong></label></li>
+  <li><input type="checkbox" id="c25"><label for="c25">本作朝代/时代服饰与建筑考据图已收集，<strong>不会误穿他国或错代（如古装误现和风、明代混清代等）</strong></label></li>
   <li><input type="checkbox" id="c26"><label for="c26">色调档位选定，暖色只留 1~2 处</label></li>
 </ul>
 
@@ -577,11 +530,11 @@ distorted weapon, text, watermark, logo
 <h2>十二、一句话总结</h2>
 <div class="banner b-pri">
   <p style="margin:0 0 10px">
-  《英雄志》改视频，<strong>最该放弃的念头是"完整改编"和"拍好打戏"</strong>：全书体量根本做不完，
-  而 AI 目前也生成不出可信的连续武打。
+  长篇小说改 AI 视频，<strong>最该放弃的念头是"完整改编"和"拍好动作/奇观"</strong>：体量根本做不完，
+  而 AI 目前也生成不出可信的连续动作。
   </p>
   <p style="margin:0 0 10px">
-  但这本书真正打动人的地方 —— <strong>人物在关口上的抉择、正邪难辨的重量、那股沉郁的命运感</strong> —— 
+  但打动读者的地方 —— <strong>人物在关口上的抉择、道德的重量、那股命运感</strong> ——
   恰恰是靠<strong>旁白、特写与空镜</strong>就能承载的，而这正是 AI 最擅长的部分。
   所以最优解是<strong>做成有声漫 / 影像散文</strong>：一个段落、一条人物线、三五个场景、一到三个人。
   </p>
@@ -593,7 +546,7 @@ distorted weapon, text, watermark, logo
 </div>
 
 <p class="muted" style="margin-top:30px">
-—— 本文件仅为个人学习与欣赏用途的制作备忘。《英雄志》著作权属原作者孙晓，请勿传播成品。
+—— 本文件为通用方法论备忘。作品专属细节（人物分期 / 场景类型 / 选段候选 / 母题金句）见 <code>works/&lt;作品&gt;/00_project/manual.html</code>。所改编原著著作权属原作者，请勿传播成品。
 </p>
 
 </div><!-- /.wrap -->
@@ -601,7 +554,7 @@ distorted weapon, text, watermark, logo
 
 <script>
 (function(){
-  var KEY='yxz_chk';
+  var KEY='vn_common_chk';
   var saved={};
   try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){}
   var boxes=document.querySelectorAll('.chk input[type=checkbox]');
