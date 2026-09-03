@@ -1,21 +1,21 @@
 {
   "generated": "2026-09-03",
   "stats": {
-    "nodes": 23,
-    "edges": 66,
+    "nodes": 28,
+    "edges": 84,
     "type_count": {
-      "敌意": 8,
-      "恩义": 9,
-      "其他": 20,
-      "同袍": 7,
+      "敌意": 11,
+      "恩义": 14,
+      "其他": 27,
+      "同袍": 9,
       "情感": 10,
       "师承": 4,
-      "血缘": 8
+      "血缘": 9
     },
     "source_count": {
-      "truth": 39,
-      "wikilink": 16,
-      "card": 11
+      "truth": 48,
+      "wikilink": 21,
+      "card": 15
     }
   },
   "nodes": [
@@ -93,6 +93,17 @@
       "path": "01_source_and_script/wiki/characters/帖木儿灭里.md"
     },
     {
+      "id": "张之越",
+      "label": "张之越",
+      "tags": [
+        "配角",
+        "九华"
+      ],
+      "is_protagonist": false,
+      "color": "#C77D4F",
+      "path": "01_source_and_script/wiki/characters/张之越.md"
+    },
+    {
       "id": "方子敬",
       "label": "方子敬",
       "tags": [
@@ -167,6 +178,18 @@
       "path": "01_source_and_script/wiki/characters/琼芳.md"
     },
     {
+      "id": "石刚",
+      "label": "石刚",
+      "tags": [
+        "配角",
+        "怒苍",
+        "五虎"
+      ],
+      "is_protagonist": false,
+      "color": "#B3372E",
+      "path": "01_source_and_script/wiki/characters/石刚.md"
+    },
+    {
       "id": "秦仲海",
       "label": "秦仲海",
       "tags": [
@@ -175,6 +198,19 @@
       "is_protagonist": true,
       "color": "#C98A2B",
       "path": "01_source_and_script/wiki/characters/秦仲海.md"
+    },
+    {
+      "id": "秦霸先",
+      "label": "秦霸先",
+      "tags": [
+        "配角",
+        "武德侯",
+        "秦仲海之父",
+        "怒苍始祖"
+      ],
+      "is_protagonist": false,
+      "color": "#C9A227",
+      "path": "01_source_and_script/wiki/characters/秦霸先.md"
     },
     {
       "id": "胡媚儿",
@@ -209,6 +245,18 @@
       "is_protagonist": false,
       "color": "#7BAF5A",
       "path": "01_source_and_script/wiki/characters/苏颖超.md"
+    },
+    {
+      "id": "萨魔",
+      "label": "萨魔",
+      "tags": [
+        "配角",
+        "蒙古",
+        "反派"
+      ],
+      "is_protagonist": false,
+      "color": "#C9A227",
+      "path": "01_source_and_script/wiki/characters/萨魔.md"
     },
     {
       "id": "言二娘",
@@ -263,6 +311,18 @@
       "is_protagonist": false,
       "color": "#4A5A6A",
       "path": "01_source_and_script/wiki/characters/顾倩兮.md"
+    },
+    {
+      "id": "齐润翔",
+      "label": "齐润翔",
+      "tags": [
+        "配角",
+        "少林",
+        "镖局"
+      ],
+      "is_protagonist": false,
+      "color": "#B8860B",
+      "path": "01_source_and_script/wiki/characters/齐润翔.md"
     }
   ],
   "edges": [
@@ -298,6 +358,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "张之越",
+      "to": "伍定远",
+      "type": "恩义",
+      "desc": "九华江湖挚友",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "江湖挚友。",
+      "evidence": "vol01",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "伍定远",
@@ -364,6 +436,18 @@
       "rev_desc": "不屠民的底线对象。"
     },
     {
+      "from": "石刚",
+      "to": "伍定远",
+      "type": "敌意",
+      "desc": "异名煞金下多次与伍为敌友，身份随乱世游移",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "多重身份下的敌友关系。",
+      "evidence": "vol04–vol05",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "伍定远",
       "to": "秦仲海",
       "type": "同袍",
@@ -390,6 +474,15 @@
     },
     {
       "from": "伍定远",
+      "to": "秦霸先",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "伍定远",
       "to": "艳婷",
       "type": "情感",
       "desc": "暗恋，终成夫妻",
@@ -410,6 +503,18 @@
       "rev_desc": ""
     },
     {
+      "from": "齐润翔",
+      "to": "伍定远",
+      "type": "恩义",
+      "desc": "临终托孤申冤，伍定远追凶一生",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "托孤申冤的捕头（伍为其追凶一生）。",
+      "evidence": "vol01 第二章",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "卓凌昭",
       "to": "卢云",
       "type": "其他",
@@ -426,6 +531,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "齐润翔",
+      "to": "卓凌昭",
+      "type": "敌意",
+      "desc": "灭门血案的苦主与仇敌（昆仑）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "灭门血案的仇敌（昆仑）。",
+      "evidence": "vol01",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "卢云",
@@ -563,6 +680,15 @@
     },
     {
       "from": "卢云",
+      "to": "秦霸先",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "卢云",
       "to": "胡媚儿",
       "type": "情感",
       "desc": "毒计与情债的对手（痛斥其「不是好男人」）。",
@@ -578,6 +704,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "卢云",
+      "to": "萨魔",
+      "type": "恩义",
+      "desc": "孤岛互救、人性之辩（正邪之辨载体）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "孤岛互救、人性之辩的对象。",
+      "evidence": "vol15 第八章",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "卢云",
@@ -720,6 +858,24 @@
       "curve_raw": ""
     },
     {
+      "from": "帖木儿灭里",
+      "to": "石刚",
+      "type": "其他",
+      "desc": "被传承\"八代煞金\"之号（名号交织）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "被传承\"八代煞金\"之号（名号交织）。"
+    },
+    {
+      "from": "帖木儿灭里",
+      "to": "萨魔",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
       "from": "银川公主",
       "to": "帖木儿灭里",
       "type": "恩义",
@@ -730,6 +886,15 @@
       "evidence": "vol16–vol22",
       "curve": [],
       "curve_raw": ""
+    },
+    {
+      "from": "张之越",
+      "to": "艳婷",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
     },
     {
       "from": "方子敬",
@@ -749,6 +914,18 @@
       "dir_desc": "",
       "rev_desc": "",
       "evidence": "vol00；vol07；vol11",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "秦霸先",
+      "to": "方子敬",
+      "type": "恩义",
+      "desc": "挚友、托孤之主（方子敬护孤寻幼主）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "挚友、托孤之主（方子敬护孤寻子）。",
+      "evidence": "vol00；vol07",
       "curve": [],
       "curve_raw": ""
     },
@@ -857,6 +1034,15 @@
     },
     {
       "from": "杨肃观",
+      "to": "秦霸先",
+      "type": "其他",
+      "desc": "其死点燃的乱世棋局（后续诸雄皆在其阴影下）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "其死点燃的乱世棋局（后续诸雄皆在其阴影下）。"
+    },
+    {
+      "from": "杨肃观",
       "to": "胡媚儿",
       "type": "情感",
       "desc": "胡媚儿痴缠，爱恨交织",
@@ -951,6 +1137,15 @@
     },
     {
       "from": "柳昂天",
+      "to": "秦霸先",
+      "type": "同袍",
+      "desc": "朝中忠臣同僚（柳曾跪谏勿杀其满门）。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "朝中忠臣同僚（柳曾跪谏勿杀其满门）。"
+    },
+    {
+      "from": "柳昂天",
       "to": "阿秀",
       "type": "血缘",
       "desc": "祖辈（柳门血脉源起）。",
@@ -1010,6 +1205,51 @@
       "curve_raw": ""
     },
     {
+      "from": "石刚",
+      "to": "秦仲海",
+      "type": "同袍",
+      "desc": "怒苍五虎同袍，见其背刺「西字虎」而罢手",
+      "source": "truth",
+      "dir_desc": "怒苍五虎同袍（见刺青罢手）。",
+      "rev_desc": "",
+      "evidence": "vol05 第九章；vol11–vol14",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "秦霸先",
+      "to": "石刚",
+      "type": "恩义",
+      "desc": "主公与贴身心腹，受托夺回羊皮传天机",
+      "source": "truth",
+      "dir_desc": "主公（受托夺羊皮传天机的旧部）。",
+      "rev_desc": "",
+      "evidence": "vol00",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "石刚",
+      "to": "韩毅",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "秦霸先",
+      "to": "秦仲海",
+      "type": "血缘",
+      "desc": "生父与遗孤，秦仲海一生为其雪冤、重建怒苍",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "生父（武德侯之死是其一生执念之源）。",
+      "evidence": "vol00；vol09–vol14",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "秦仲海",
       "to": "胡媚儿",
       "type": "敌意",
@@ -1017,6 +1257,15 @@
       "source": "card",
       "dir_desc": "",
       "rev_desc": "江充鹰犬身份下的敌对者。"
+    },
+    {
+      "from": "秦仲海",
+      "to": "萨魔",
+      "type": "敌意",
+      "desc": "怒苍线的敌对者。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "怒苍线的敌对者。"
     },
     {
       "from": "秦仲海",
