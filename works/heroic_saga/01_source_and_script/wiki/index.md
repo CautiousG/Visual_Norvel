@@ -13,6 +13,7 @@
   - [[crowd_scenes|🌋 群像大场面池]] — 多主角同框 / 时代大场面 / 预告级宏镜头
   - [[plot_twists|🎭 极致反转池]] — 出人意表的反转 / 悬念钩子
 - [[timeline]] — 景泰纪年时间线（待建）
+- [[unpublished_ending|📕 未出版结局卷目录]] — 结局卷（23–25/26）已公开标题，正文未出版
 - 全文分卷：`../source/text/vol00.md` ~ `vol22.md`（索引 `../source/text/index.md`）
 
 ## 卷梗概 volumes/
