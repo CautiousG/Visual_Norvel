@@ -39,3 +39,10 @@ desktop.ini
 .netlify/
 __pycache__/
 *.pyc
+
+# ───────── 三模型并行续写草稿：原创续写大纲，纳入版本管理 ─────────
+# 说明：结局续写是创作性产物（非原著原文转载，版权无碍），已入库。
+# 若日后需隔离，可恢复排除以下三行：
+# **/ending_drafts/draft_A/
+# **/ending_drafts/draft_B/
+# **/ending_drafts/draft_C/
