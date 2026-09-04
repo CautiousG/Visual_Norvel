@@ -8,6 +8,10 @@
 ## 导航
 - [[status]] — 消化深度追踪 + 深挖任务 + 日志
 - [[candidates]] — ⭐ 可改编高光段落清单（选段用）
+- **素材池（按用途）×3**：
+  - [[storm_scenes|⚡ 主角高光池]] — 四大主角「立住他」的一分钟
+  - [[crowd_scenes|🌋 群像大场面池]] — 多主角同框 / 时代大场面 / 预告级宏镜头
+  - [[plot_twists|🎭 极致反转池]] — 出人意表的反转 / 悬念钩子
 - [[timeline]] — 景泰纪年时间线（待建）
 - 全文分卷：`../source/text/vol00.md` ~ `vol22.md`（索引 `../source/text/index.md`）
 
