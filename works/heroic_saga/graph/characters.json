@@ -5,18 +5,18 @@
     "edges": 118,
     "type_count": {
       "敌意": 19,
-      "恩义": 18,
-      "其他": 38,
-      "同袍": 15,
-      "情感": 11,
+      "恩义": 20,
+      "其他": 32,
+      "同袍": 20,
+      "情感": 10,
       "血缘": 11,
       "师承": 5,
       "悬": 1
     },
     "source_count": {
-      "truth": 65,
-      "wikilink": 30,
-      "card": 23
+      "truth": 73,
+      "wikilink": 23,
+      "card": 22
     }
   },
   "nodes": [
@@ -393,10 +393,11 @@
       "label": "韩毅",
       "tags": [
         "配角",
-        "怒苍"
+        "怒苍",
+        "五虎"
       ],
       "is_protagonist": false,
-      "color": "#C77D4F",
+      "color": "#C9A227",
       "path": "01_source_and_script/wiki/characters/韩毅.md"
     },
     {
@@ -612,15 +613,6 @@
       "curve_raw": ""
     },
     {
-      "from": "伍定远",
-      "to": "言二娘",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
-      "dir_desc": "",
-      "rev_desc": ""
-    },
-    {
       "from": "陆孤瞻",
       "to": "伍定远",
       "type": "恩义",
@@ -631,6 +623,15 @@
       "evidence": "vol21 第二章",
       "curve": [],
       "curve_raw": ""
+    },
+    {
+      "from": "伍定远",
+      "to": "韩毅",
+      "type": "其他",
+      "desc": "vol17 襄阳狭路相逢的对决者。",
+      "source": "card",
+      "dir_desc": "",
+      "rev_desc": "vol17 襄阳狭路相逢的对决者。"
     },
     {
       "from": "齐润翔",
@@ -859,11 +860,14 @@
     {
       "from": "卢云",
       "to": "秦霸先",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "恩义",
+      "desc": "柳门渊源、救秦家遗孤、承其儒侠遗志",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol03–vol14",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "卢云",
@@ -1192,7 +1196,7 @@
       "desc": "义父师长与义子",
       "source": "truth",
       "dir_desc": "",
-      "rev_desc": "义父师长（方子敬义子）。",
+      "rev_desc": "怒苍师门长辈（方子敬义子）。",
       "evidence": "vol01–vol13",
       "curve": [],
       "curve_raw": ""
@@ -1221,20 +1225,26 @@
     {
       "from": "李铁衫",
       "to": "陆孤瞻",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "同袍",
+      "desc": "怒苍五虎（铁剑震天南 × 江东帆影）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol11–vol14",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "李铁衫",
       "to": "韩毅",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "同袍",
+      "desc": "怒苍五虎（铁剑震天南 × 小吕布）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol11–vol17",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "李铁衫",
@@ -1249,10 +1259,13 @@
       "from": "杨肃观",
       "to": "柳昂天",
       "type": "同袍",
-      "desc": "早期效力的柳门都督。",
-      "source": "card",
+      "desc": "早期效力的柳门都督（柳门铁卫线的起点）",
+      "source": "truth",
       "dir_desc": "早期效力的柳门都督。",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol03–vol14",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "杨肃观",
@@ -1607,11 +1620,14 @@
     {
       "from": "石刚",
       "to": "陆孤瞻",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "同袍",
+      "desc": "怒苍五虎（气冲塞北 × 江东帆影）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol11–vol14",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "石刚",
@@ -1625,11 +1641,14 @@
     {
       "from": "石刚",
       "to": "韩毅",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "同袍",
+      "desc": "怒苍五虎（煞金 × 小吕布）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol11–vol17",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "秦霸先",
@@ -1656,20 +1675,23 @@
       "from": "秦仲海",
       "to": "萨魔",
       "type": "敌意",
-      "desc": "怒苍线的敌对者。",
-      "source": "card",
+      "desc": "怒苍线的敌对凶物（萨魔被朝廷放出钳制怒苍）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": "怒苍线的敌对者。"
+      "rev_desc": "怒苍线的敌对者。",
+      "evidence": "vol09–vol15",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "秦仲海",
       "to": "言二娘",
-      "type": "情感",
-      "desc": "怒苍夫妻，烽火下拜堂",
+      "type": "恩义",
+      "desc": "相知相惜的男女情愫，却终究\"义结金兰\"（姐弟）——秦仲海为唤醒韩毅忍痛将言二娘归还故夫，未成夫妻",
       "source": "truth",
-      "dir_desc": "救护并倾心于他的怒苍烈女（其亡夫小吕布/韩毅构成情义死结）。",
-      "rev_desc": "继室妻子，烽火拜堂结亲。",
-      "evidence": "vol11 第六章；vol13 第二章",
+      "dir_desc": "相知相惜却未相守的怒苍烈女——秦仲海为唤醒韩毅（其发夫）而忍痛以\"义结金兰\"割爱，将她归还故夫。",
+      "rev_desc": "相知相惜却未能相守——秦仲海以\"义结金兰/姐弟\"定性割爱，将其归还故夫韩毅（vol13）。",
+      "evidence": "vol11；vol13",
       "curve": [],
       "curve_raw": ""
     },
@@ -1735,7 +1757,7 @@
       "desc": "怒苍战友、兄弟；旧部情义死结",
       "source": "truth",
       "dir_desc": "",
-      "rev_desc": "怒苍战友/兄弟。",
+      "rev_desc": "怒苍战友/兄弟（秦仲海甘愿让他苏醒、自己承受与言二娘分离）。",
       "evidence": "vol13–vol17",
       "curve": [],
       "curve_raw": ""
@@ -1771,11 +1793,11 @@
       "from": "言二娘",
       "to": "韩毅",
       "type": "情感",
-      "desc": "前夫与亡妻，旧情义形成死结",
+      "desc": "发妻与发夫；韩毅神鬼亭惨祸后痴傻如死（阿傻）而诀别，旧情义成死结",
       "source": "truth",
       "dir_desc": "",
-      "rev_desc": "亡夫（小吕布）。",
-      "evidence": "vol13–vol17",
+      "rev_desc": "发妻（因痴傻而诀别，言二娘后嫁秦仲海；情义死结）。",
+      "evidence": "vol11；vol13–vol17",
       "curve": [],
       "curve_raw": ""
     },
@@ -1816,11 +1838,14 @@
     {
       "from": "陆孤瞻",
       "to": "韩毅",
-      "type": "其他",
-      "desc": "",
-      "source": "wikilink",
+      "type": "同袍",
+      "desc": "怒苍五虎（江东帆影 × 小吕布）",
+      "source": "truth",
       "dir_desc": "",
-      "rev_desc": ""
+      "rev_desc": "",
+      "evidence": "vol11–vol17",
+      "curve": [],
+      "curve_raw": ""
     }
   ]
 }
