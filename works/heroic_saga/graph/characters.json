@@ -1,20 +1,20 @@
 {
-  "generated": "2026-09-03",
+  "generated": "2026-09-04",
   "stats": {
-    "nodes": 34,
-    "edges": 110,
+    "nodes": 36,
+    "edges": 118,
     "type_count": {
-      "敌意": 16,
-      "恩义": 17,
-      "其他": 37,
-      "同袍": 13,
+      "敌意": 19,
+      "恩义": 18,
+      "其他": 39,
+      "同袍": 15,
       "情感": 11,
       "师承": 5,
       "血缘": 11
     },
     "source_count": {
-      "truth": 59,
-      "wikilink": 29,
+      "truth": 65,
+      "wikilink": 31,
       "card": 22
     }
   },
@@ -81,6 +81,18 @@
       "is_protagonist": false,
       "color": "#7BAF5A",
       "path": "01_source_and_script/wiki/characters/宁不凡.md"
+    },
+    {
+      "id": "屠凌心",
+      "label": "屠凌心",
+      "tags": [
+        "配角",
+        "昆仑",
+        "反派"
+      ],
+      "is_protagonist": false,
+      "color": "#8E7CC3",
+      "path": "01_source_and_script/wiki/characters/屠凌心.md"
     },
     {
       "id": "帅金藤",
@@ -166,6 +178,18 @@
       "is_protagonist": false,
       "color": "#C9A227",
       "path": "01_source_and_script/wiki/characters/江充.md"
+    },
+    {
+      "id": "灵智",
+      "label": "灵智",
+      "tags": [
+        "配角",
+        "少林",
+        "方丈"
+      ],
+      "is_protagonist": false,
+      "color": "#B8860B",
+      "path": "01_source_and_script/wiki/characters/灵智.md"
     },
     {
       "id": "王一通",
@@ -512,6 +536,15 @@
     },
     {
       "from": "伍定远",
+      "to": "灵智",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
+    },
+    {
+      "from": "伍定远",
       "to": "王一通",
       "type": "其他",
       "desc": "不屠民的底线对象。",
@@ -618,6 +651,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "屠凌心",
+      "to": "卓凌昭",
+      "type": "同袍",
+      "desc": "昆仑十三剑之三「剑蛊」，掌门卓凌昭麾下",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "昆仑掌门（十三剑之三，受其统辖）。",
+      "evidence": "vol01；vol09",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "李铁衫",
@@ -764,6 +809,18 @@
       "source": "wikilink",
       "dir_desc": "",
       "rev_desc": ""
+    },
+    {
+      "from": "灵智",
+      "to": "卢云",
+      "type": "恩义",
+      "desc": "请托卢云演「荆轲刺秦王」行刺杨肃观",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "请托其行刺的谋主之一。",
+      "evidence": "vol21",
+      "curve": [],
+      "curve_raw": ""
     },
     {
       "from": "卢云",
@@ -915,6 +972,18 @@
       "curve_raw": "1..2:情感|初恋; 3..6:悬|旧情隔绝; 7:情感|重逢"
     },
     {
+      "from": "屠凌心",
+      "to": "哲尔丹",
+      "type": "敌意",
+      "desc": "万福楼单挑（漠北第一高手 vs 剑蛊）",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "万福楼单挑对手（漠北第一高手）。",
+      "evidence": "vol20",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
       "from": "哲尔丹",
       "to": "秦仲海",
       "type": "敌意",
@@ -948,6 +1017,18 @@
       "desc": "少林关门弟子，法号灵吾玄志",
       "source": "truth",
       "dir_desc": "关门弟子（灵吾玄志）。",
+      "rev_desc": "",
+      "evidence": "vol03–vol14",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "灵智",
+      "to": "天绝僧",
+      "type": "同袍",
+      "desc": "少林四大金刚/达摩院主同门",
+      "source": "truth",
+      "dir_desc": "",
       "rev_desc": "",
       "evidence": "vol03–vol14",
       "curve": [],
@@ -992,6 +1073,18 @@
       "dir_desc": "",
       "rev_desc": "师父（授业、三达剑）。",
       "evidence": "第七卷–vol19",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "屠凌心",
+      "to": "苏颖超",
+      "type": "敌意",
+      "desc": "万福楼群英会的对手（剑影/剑蛊双剑）",
+      "source": "truth",
+      "dir_desc": "万福楼群英会的对手。",
+      "rev_desc": "",
+      "evidence": "vol20",
       "curve": [],
       "curve_raw": ""
     },
@@ -1169,6 +1262,18 @@
       "dir_desc": "",
       "rev_desc": "",
       "evidence": "vol03–vol14",
+      "curve": [],
+      "curve_raw": ""
+    },
+    {
+      "from": "灵智",
+      "to": "杨肃观",
+      "type": "敌意",
+      "desc": "少林方丈看清其修罗真面目，终局暗请刺杨",
+      "source": "truth",
+      "dir_desc": "",
+      "rev_desc": "故交/看清其修罗真面目者（终局谋划刺杨）。",
+      "evidence": "vol21",
       "curve": [],
       "curve_raw": ""
     },
@@ -1398,6 +1503,15 @@
       "source": "card",
       "dir_desc": "",
       "rev_desc": "主子（江充鹰犬）。"
+    },
+    {
+      "from": "灵智",
+      "to": "秦仲海",
+      "type": "其他",
+      "desc": "",
+      "source": "wikilink",
+      "dir_desc": "",
+      "rev_desc": ""
     },
     {
       "from": "琼翊",
